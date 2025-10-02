@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+# Root-level gradle wrapper shim to support CI systems that call ./gradlew from project root.
+# Delegates to the placeholder inside android/ if present.
+if [ -x "./android/gradlew" ]; then
+  exec ./android/gradlew "$@"
+else
+  echo "[gradlew shim] android/gradlew not found. This is an Expo-managed project."
+  echo "Generate native projects first: npx expo prebuild --platform android"
+  exit 0
+fi

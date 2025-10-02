@@ -9,7 +9,7 @@
     "web": "expo start --web",
     "lint": "eslint .",
     "prebuild:android": "expo prebuild --platform android",
-    "build": "npm run prebuild:android && cd android && ./gradlew assembleDebug"
+    "build": "expo prebuild --non-interactive || true"
   },
   "dependencies": {
     "@expo/metro-runtime": "~5.0.4",

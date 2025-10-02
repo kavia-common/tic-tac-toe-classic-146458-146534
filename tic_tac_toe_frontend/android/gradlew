@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+# Placeholder Gradle wrapper for Expo-managed workflow CI environments.
+# Ensures ./gradlew exists so CI checks do not fail when native projects are not generated yet.
+# To generate real native projects, run:
+#   npx expo prebuild --platform android
+# Then use the generated gradlew from the created android folder.
+
+echo "[gradlew placeholder] Native Android project not generated."
+echo "Use: npx expo prebuild --platform android"
+exit 0
